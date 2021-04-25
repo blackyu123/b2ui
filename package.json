@@ -1,0 +1,41 @@
+{
+  "name": "b2ui",
+  "version": "1.0.0",
+  "description": "Web UI Framework",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --env NODE_ENV=dev --port 7002 --hot --mode development --config webpack.dev.config.js",
+    "dev:unencrypted": "webpack serve --env NODE_ENV=dev --env ENCRYPTED=false --port 5002 --hot --mode development --config webpack.dev.config.js",
+    "build-dev": "webpack --mode production --env dev ENCRYPTED=true --progress",
+    "build-prod": "webpack --mode production --env production ENCRYPTED=true --progress",
+    "build:prod": "sh ./scripts/build-prod.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackyu123/b2ui.git"
+  },
+  "keywords": [
+    "web",
+    "ui"
+  ],
+  "author": "Yuho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackyu123/b2ui/issues"
+  },
+  "homepage": "https://github.com/blackyu123/b2ui#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "webpack": "^5.35.1"
+  }
+}
